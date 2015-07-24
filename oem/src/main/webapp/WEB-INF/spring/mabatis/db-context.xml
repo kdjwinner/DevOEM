@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+   
+    <context:annotation-config />    
+		
+	<bean id="propertyPlaceholderConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+        	<list>
+	         	<value>classpath:properties/db.properties</value>				     		        	       	     	
+        	</list>
+        </property>
+    </bean>		    
+       
+    <bean id="logDataSource" class="net.sf.log4jdbc.Log4jdbcProxyDataSource">
+		<constructor-arg ref="dataSource" />
+		<property name="logFormatter">
+			<bean class="net.sf.log4jdbc.tools.Log4JdbcCustomFormatter">
+				<property name="loggingType" value="MULTI_LINE" />
+				<property name="sqlPrefix" value="SQL Oracle:::" />
+			</bean>
+		</property>
+	</bean>   
+	
+    <bean id="logDataSource2" class="net.sf.log4jdbc.Log4jdbcProxyDataSource">
+		<constructor-arg ref="dataSource2" />
+		<property name="logFormatter">
+			<bean class="net.sf.log4jdbc.tools.Log4JdbcCustomFormatter">
+				<property name="loggingType" value="MULTI_LINE" />
+				<property name="sqlPrefix" value="SQL MSSql:::" />
+			</bean>
+		</property>
+	</bean>  	 
+
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+      <property name="driverClassName" value="${jdbc.driverClassName}" />
+      <property name="url" value="${jdbc.url}" />
+      <property name="username" value="${jdbc.username}" />
+      <property name="password" value="${jdbc.password}" />
+    </bean>
+    
+    <bean id="dataSource2" class="org.apache.commons.dbcp.BasicDataSource">
+      <property name="driverClassName" value="${mssql.driverClassName}" />
+      <property name="url" value="${mssql.url}" />
+      <property name="username" value="${mssql.username}" />
+      <property name="password" value="${mssql.password}" />
+    </bean>    
+    
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">   
+      <qualifier value="oracleDBFactory" />             
+      <property name="dataSource" ref="logDataSource" />      
+      <property name="mapperLocations" value="classpath:sqlmap/oracle/*.xml" />
+      <property name="configLocation" value="/WEB-INF/spring/mabatis/oracle-config.xml" />    
+      <property name="transactionFactory">
+            <bean class="org.apache.ibatis.transaction.managed.ManagedTransactionFactory" />
+      </property>
+    </bean>
+    
+    <bean id="sqlSessionFactory2" class="org.mybatis.spring.SqlSessionFactoryBean">   
+      <qualifier value="mssqlDBFactory" />             
+      <property name="dataSource" ref="logDataSource2" />       
+      <property name="mapperLocations" value="classpath:sqlmap/mssql/*.xml" />
+	  <property name="configLocation" value="/WEB-INF/spring/mabatis/mssql-config.xml" />            
+      <property name="transactionFactory">
+            <bean class="org.apache.ibatis.transaction.managed.ManagedTransactionFactory" />
+      </property>
+    </bean>    
+    
+    <bean id="sqlSessionOracle" class="org.mybatis.spring.SqlSessionTemplate">
+      <qualifier value="oracleDB" />    
+      <constructor-arg ref="sqlSessionFactory" /> 
+    </bean>
+ 
+    <bean id="sqlSessionMssql" class="org.mybatis.spring.SqlSessionTemplate">
+      <qualifier value="mssqlDB" />    
+      <constructor-arg ref="sqlSessionFactory2" />  
+    </bean>    
+
+</beans>

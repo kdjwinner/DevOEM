@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="test">    
+    <select id="getTest" resultType="java.lang.String">
+		SELECT COUNT(*) AS cnt FROM SETTYPES 
+    </select>     	
+    <select id="getJsonTest" resultType="com.ktf.oem.test.TestBean2">
+    	select file_title, cate_code from tb_file_service_map2 where cate_code = 200101 and file_sort <![CDATA[<]]> 6
+    </select>	
+    <select id="getJsonTest2" resultType="java.util.Map">
+    	select  metaseq, cate_code, file_scp_id, cate_name, file_regdate, file_title, file_singer, file_scp,
+				file_xring1, file_xring2, file_xring3, ktf_lid, file_lring1, file_lring2, file_lring3, file_sort 
+		from 	tb_file_service_map2 
+		where	cate_code = 200000 and rownum <![CDATA[<=]]> 18 order by file_sort
+    </select>	 
+    <select id="getXmlTest" resultType="com.ktf.oem.test.TestBean2">
+    	select file_title, cate_code from tb_file_service_map2 where cate_code = 200101 and ktf_lid = 82146371
+    </select>
+    <select id="getRecommandAll" resultType="java.util.Map">
+    	select file_title, cate_code from tb_file_service_map2 where cate_code = 200101 and file_sort <![CDATA[<]]> 6
+    </select>	 
+    <select id="testBean" resultType="com.ktf.oem.contents.Content">
+    	select file_title, cate_code from tb_file_service_map2 where cate_code = 200101 and file_sort <![CDATA[<]]> 6
+    </select>	    
+
+</mapper>

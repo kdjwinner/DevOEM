@@ -1,0 +1,499 @@
+/* 공통 적용 styles */
+/* 별점 */
+.points .stars {padding-left:140px;}
+.points .star1 {background:url('/mOlleh/r2u/image/bgStars1.png') no-repeat left center;background-size:63px;-webkit-background-size:63px auto;-moz-background-size:63px auto;}
+.points .star2 {background:url('/mOlleh/r2u/image/bgStars2.png') no-repeat left center;background-size:63px;-webkit-background-size:63px auto;-moz-background-size:63px auto;}
+.points .star3 {background:url('/mOlleh/r2u/image/bgStars3.png') no-repeat left center;background-size:63px;-webkit-background-size:63px auto;-moz-background-size:63px auto;}
+.points .star4 {background:url('/mOlleh/r2u/image/bgStars4.png') no-repeat left center;background-size:63px;-webkit-background-size:63px auto;-moz-background-size:63px auto;}
+.points .star5 {background:url('/mOlleh/r2u/image/bgStars5.png') no-repeat left center;background-size:63px;-webkit-background-size:63px auto;-moz-background-size:63px auto;}
+
+/* text color */
+.red {color:#de1a22;}
+/* ******************** */
+
+/* location select area */
+.locationSel {position:relative; overflow:hidden; padding:8px 93px 13px 8px;}
+.locationSel .currentLoca {width:100%; overflow:hidden; font-size:14px; color:#555;}
+.locationSel .currentLoca .tit {float:left; margin-right:8px;letter-spacing:-1px;}
+.locationSel .currentLoca .info {color: #145616;display: block;font-size: 16px; padding-top:1px; line-height: 18px;text-align: left;text-shadow: 0 1px 1px #EEEEEE;position:relative;top:-2px;}
+.locationSel .setLocation {position:absolute; right:8px; top:8px; width:auto; font-size:14px; color:#555; text-align:right;}
+.locationSel .setLocation .btns {display:inline-block; padding:1px 0 0 18px; background:url('http://m.test.olleh.com/MAIN/IMAGE/INDEX/bgWhereLoca.png') no-repeat 0 0; color:#555;background-size:17px auto;-webkit-background-size:17px auto;-moz-background-size:17px auto;}
+.locationSel .setLocation .btns span {}
+
+/* title guide */
+.pageTit01 {padding:9px 0 9px 10px; color:#3d3d3d; font-size:16px; letter-spacing:-1px;
+	box-shadow:0 1px 2px #efefef; -moz-box-shadow:0 1px 2px #efefef; -webkit-box-shadow:0 1px 2px #efefef;
+	background:#e9e9e9;
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#f0f0f0), to(#e9e9e9));
+    background:-moz-linear-gradient(0% 0% 270deg, #f0f0f0, #e9e9e9);
+	border-bottom:1px solid #bbb;
+}
+.pageTit02 {padding:8px 0 8px 10px; color:#3d3d3d; letter-spacing:-2px;}
+.pageTit02 .red{color:#FF0000;}
+
+.pageTit03 {position:relative; background:#f2f2f2; border-top:2px solid #262626; border-bottom:2px solid #c1c1c1; padding:10px 0 9px 10px;}
+.pageTit03 .tit {color:#000; letter-spacing:-1px;}
+.pageTit03 .text { color:#8d8d8d; padding-left:18px; letter-spacing:-2px;}
+.pageTit03 .arrow {position:absolute; right:0; top:0; height:100%; width:60px;}
+.pageTit03 .arrow.up {background:url('http://m.test.olleh.com/GLOBAL/IMAGE/BTN/btnArrowUp3.png') no-repeat center center;background-size:17px auto;-webkit-background-size:17px auto;-moz-background-size:17px auto;}
+.pageTit03 .arrow.down {background:url('http://m.test.olleh.com/GLOBAL/IMAGE/BTN/btnArrowDown3.png') no-repeat center center;background-size:17px auto;-webkit-background-size:17px auto;-moz-background-size:17px auto;}
+.foldCont {display:none;}
+.foldCont.open {display:block;}
+
+/* paging background */
+.pagings {width:100%; text-align:center; border-top:1px solid #c1c1c1;}
+/* paging type01 - 5 page navgate */
+.pagings.page5 {padding:5px 0;}
+.pagings.page5 a {position:relative; display:inline-block; width:25px; height:25px; margin-right:3px; color:#333;  text-align:center; line-height:24px; vertical-align:middle;
+    border-top:1px solid #c1c1c1; border-right:1px solid #adadad; border-bottom:1px solid #989898; border-left:1px solid #afafaf; 
+    border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; 
+    box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; 
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#e4e4e4));
+    background:-moz-linear-gradient(center top, #fff 0%,#e4e4e4 100%);
+    box-shadow:1px 1px 1px #d9d9d9; -moz-box-shadow:1px 1px 1px #d9d9d9; -webkit-box-shadow:1px 1px 1px #d9d9d9; 
+}
+.pagings.page5 a span {position:absolute; display:block; width:100%; height:100%; font-size:0; text-indent:-9999px;}
+.pagings.page5 a.prev.on span {background:url('/mOlleh/r2u/image/pagingPrev.png') no-repeat center center;background-size:9px;-webkit-background-size:9px auto;-moz-background-size:9px auto;}
+.pagings.page5 a.prev.off span {background:url('/mOlleh/r2u/image/pagingPrev_off.png') no-repeat center center;background-size:9px;-webkit-background-size:9px auto;-moz-background-size:9px auto;}
+.pagings.page5 a.first.on span {background:url('/mOlleh/r2u/image/pagingFirst.png') no-repeat center center;background-size:14px;-webkit-background-size:14px auto;-moz-background-size:14px auto;}
+.pagings.page5 a.first.off span {background:url('/mOlleh/r2u/image/pagingFirst_off.png') no-repeat center center;background-size:14px;-webkit-background-size:14px auto;-moz-background-size:14px auto;}
+.pagings.page5 a.next.on span {background:url('/mOlleh/r2u/image/pagingNext.png') no-repeat center center;background-size:9px;-webkit-background-size:9px auto;-moz-background-size:9px auto;}
+.pagings.page5 a.next.off span {background:url('/mOlleh/r2u/image/pagingNext_off.png') no-repeat center center;background-size:9px;-webkit-background-size:9px auto;-moz-background-size:9px auto;}
+.pagings.page5 a.last.on span {background:url('/mOlleh/r2u/image/pagingLast.png') no-repeat center center;background-size:14px;-webkit-background-size:14px auto;-moz-background-size:14px auto;}
+.pagings.page5 a.last.off span {background:url('/mOlleh/r2u/image/pagingLast_off.png') no-repeat center center;background-size:14px;-webkit-background-size:14px auto;-moz-background-size:14px auto;}
+
+.pagings.page5 a:last-child {margin-right:0;}
+.pagings.page5 a img {margin-top:-5px;}
+/* .pagings.page5 a.on {color:#de1a22; border:1px solid #e5484e; background:#fff;} */
+.pagings.page5 .loca {margin:0 10px; color:#666; vertical-align:middle;}
+.pagings.page5 .loca strong {color:#000; font-weight:bold;}
+
+/* paging type02 - 5 more view */
+.pagings.more5 {padding:5px 0; border-bottom:1px solid #c9c9c9; margin-bottom:13px;
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#eaeaea));
+    background:-moz-linear-gradient(center top, #fff 0%,#eaeaea 100%);
+}
+.pagings.more5 a {display:inline-block; padding:5px 10px; color:#555; letter-spacing:-1px;}
+.pagings.more5 a span {color:#aaa;}
+
+/* 어플다운로드 안내 */
+.btnAppsDown {display:inline-block; width:230px; height:45px; padding:8px; text-align:center; line-height:100%; font-size:15px; color:#000; letter-spacing:-1px;
+    box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; 
+    /* border:1px solid #c2c2c2; border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; 
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#e6e6e6));
+    background:-moz-linear-gradient(center top, #fff 0%,#e6e6e6 100%); */
+    background:url('/mOlleh/r2u/image/bgBtnAppsDown.png') no-repeat 0 0;background-size:230px;-webkit-background-size:230px auto;-moz-background-size:230px auto;
+}
+.btnAppsDown img {vertical-align:middle; margin-right:3px;width:30px;}
+
+
+/* music-ringtoyou contents list sample */
+.musicPriceInfo {overflow:hidden; padding:5px 8px 10px;}
+.musicPriceInfo .won {float:right; padding-left:13px; background:url('/mOlleh/r2u/image/icoMusicWon.png') no-repeat 0 center; color:#333; }
+.musicPriceInfo .won span {margin-left:5px;}
+
+/* 2013-12-19 엠올레 검수를 위해서 수정 */
+.musicList01 {border-top:1px solid #000;margin-bottom:-1px;}
+.musicList01 table {width:100%; border-collapse:collapse;}
+.musicList01 table thead {
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#dfdfdf));
+    background:-moz-linear-gradient(center top, #fff 0%,#dfdfdf 100%);
+    box-shadow:0 2px 3px #bfbfbf; box-shadow:0 2px 3px #bfbfbf; box-shadow:0 2px 3px #bfbfbf; 
+}
+.musicList01 table thead th {text-align:center; color:#666; border-bottom:1px solid #ababab; padding:10px 0; letter-spacing:-2px;}
+.musicList01 table thead th:last-child {padding-right:8px;}
+.musicList01 table td {border-bottom:1px solid #c9c9c9; padding:5px 0; text-align:center; color:#666;}
+.musicList01 table tbody tr td:last-child {padding-right:8px;}
+.musicList01 table tr:nth-child(even) td {background:#f5f5f5;}
+.musicList01 table td.nums {font-size:14px;}
+.musicList01 table td.tits {text-align:left; padding-left:8px;}
+.musicList01 table td.tits .tit {display:block; width:100%; padding-bottom:4px; color:#000; font-size:15px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.musicList01 table td.tits .artist {display:block; width:100%;  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+
+
+
+.appsDownload {text-align:center; padding:15px 0;}
+
+/* music-ringtoyou view sample */
+.contTopBtns {overflow:hidden; border-bottom:1px solid #e2e2e3; padding:10px 15px; background:#f2f2f2;}
+.contTopBtns .left {float:left;}
+.contTopBtns .right {float:right;}
+
+.viewMusic01 {position:relative; padding:8px; overflow:hidden;}
+.viewMusic01 .thumb {position:absolute; top:8px; left:8px; width:108px; height:103px;}
+.viewMusic01 .thumb img {height:100%;}
+.viewMusic01 .info {padding-left:125px;}
+.viewMusic01 .info p {width:100%; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; line-height:100%; padding-bottom:8px;}
+.viewMusic01 .info p:first-child {padding-bottom:10px;}
+.viewMusic01 .info p:last-child {padding-bottom:0;}
+.viewMusic01 .info .tit {color:#000; text-shadow:1px 0 0 #000;}
+.viewMusic01 .info .singer {color:#000;}
+.viewMusic01 .info .points {}
+.viewMusic01 .info .points .stars {float:left; color:#dd1a22; padding:0 10px 0 35px;}
+.viewMusic01 .info .points .part {float:left; color:#555; padding-left:10px; background:url('/mOlleh/r2u/image/bgViewPointsParts.png') no-repeat left center;}
+.viewMusic01 .info .cate {color:#555;}
+.viewMusic01 .info .date {color:#555;}
+
+.albumInfo {border-top:1px solid #000;}
+.albumInfo table {width:100%; border-collapse:collapse;}
+.albumInfo table thead {
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#dfdfdf));
+    background:-moz-linear-gradient(center top, #fff 0%,#dfdfdf 100%);
+    box-shadow:0 2px 3px #bfbfbf; box-shadow:0 2px 3px #bfbfbf; box-shadow:0 2px 3px #bfbfbf; 
+}
+.albumInfo table thead th {text-align:left; color:#666; border-bottom:1px solid #ababab; padding:10px 0;}
+.albumInfo table td {border-bottom:1px solid #c9c9c9; padding:10px 0; text-align:left; color:#666; }
+.albumInfo table tr:nth-child(even) td {background:#f5f5f5;}
+.albumInfo table tr th:first-child {text-align:center;}
+.albumInfo table tr th:last-child {text-align:center;}
+.albumInfo table tr td:first-child {text-align:center;}
+.albumInfo table tr td:last-child {text-align:center;}
+
+.wholeListMove {padding:0px 8px; overflow:hidden; text-align:left;}
+.wholeListMove a {display:inline-block; height:16px; padding:10px 8px; color:#333;line-height:15px; letter-spacing:-1px;}
+.wholeListMove .prev {padding-left:30px; background:url('/mOlleh/r2u/image/btnWholePrev.gif') no-repeat left center;background-size:25px;-webkit-background-size:25px auto;-moz-background-size:25px auto;}
+.wholeListMove .next {padding-right:33px; background:url('/mOlleh/r2u/image/btnWholeNext.gif') no-repeat right center;background-size:25px;-webkit-background-size:25px auto;-moz-background-size:25px auto;}
+.wholeListMove .whole {float:right;padding-right:0px;}
+
+
+/* contents - list sample, type01 */
+.icons .internet {padding:0 0 0 13px; background:url('/mOlleh/r2u/image/icoForInternet.png') no-repeat 0 center;background-size:10px;-webkit-background-size:10px auto;-moz-background-size:10px auto;}
+.icons .mobile {padding:0 0 0 13px; margin:0 0 0 5px; background:url('/mOlleh/r2u/image/icoForMobile.png') no-repeat 0 center;background-size:10px;-webkit-background-size:10px auto;-moz-background-size:10px auto;}
+.icons .web {padding:0 0 0 15px; margin:0 0 0 5px; background:url('/mOlleh/r2u/image/icoForWeb.png') no-repeat 0 center;background-size:10px;-webkit-background-size:10px auto;-moz-background-size:10px auto;}
+.contIconInfo {padding:5px 8px 10px; text-align:right; overflow:hidden; color:#000; }
+.thumbList01 {border-top:1px solid #c9c9c9; margin-bottom:-1px;}
+.thumbList01 li {position:relative; padding:8px; border-bottom:1px solid #c9c9c9; overflow:hidden;}
+.thumbList01 li:nth-child(even) {background:#f2f2f2;}
+.thumbList01 .thumb {position:absolute; top:8px; left:8px; width:74px; height:107px; border:1px solid #3d3d3d; overflow:hidden;}
+.thumbList01 .thumb img {height:100%;}
+.thumbList01 .info {padding-left:90px; color:#666;}
+.thumbList01 .info p {width:100%; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;line-height:100%; margin-bottom:4px;}
+.thumbList01 .info p:first-child {margin-bottom:7px;}
+.thumbList01 .info p:last-child {margin-bottom:0;}
+.thumbList01 .info .tit {padding:2px 0 3px 0; color:#000; text-shadow:1px 0 0 #000;}
+.thumbList01 .info .tit.able12 {padding-left:20px; background:url('/mOlleh/r2u/image/icoAble12.png') no-repeat 0 0;background-size:16px;-webkit-background-size:16px auto;-moz-background-size:16px auto;}
+.thumbList01 .info .tit.able15 {padding-left:20px; background:url('/mOlleh/r2u/image/icoAble15.png') no-repeat 0 0;background-size:16px;-webkit-background-size:16px auto;-moz-background-size:16px auto;}
+.thumbList01 .info .tit.able19 {padding-left:20px; background:url('/mOlleh/r2u/image/icoAble19.png') no-repeat 0 0;background-size:16px;-webkit-background-size:16px auto;-moz-background-size:16px auto;}
+.thumbList01 .info .tit.ableAll {padding-left:20px; background:url('/mOlleh/r2u/image/icoAbleAll.png') no-repeat 0 0;background-size:16px;-webkit-background-size:16px auto;-moz-background-size:16px auto;}
+.thumbList01 .info .points {}
+.thumbList01 .info .points .stars {float:left; padding:0 0 0 70px; color:#dd1a22;}
+.thumbList01 .info .points .read {float:left;}
+.thumbList01 .info .points .part {float:left; padding-left:10px; margin-left:10px; background:url('/mOlleh/r2u/image/bgViewPointsParts.png') no-repeat left center;}
+.thumbList01 .info .detail {vertical-align:top; letter-spacing:-1px; margin-bottom:0;}
+.thumbList01 .info .detail span {float:left; padding:0 0 8px 10px; background:url('/mOlleh/r2u/image/bgViewPointsParts.png') no-repeat left 2px;}
+.thumbList01 .info .detail .cate {padding-left:0; background:none; width:100%; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.thumbList01 .info .detail .actor {float:none; margin-left:7px;}
+.thumbList01 .info .detail span.clear {clear:both; padding-right:18px; padding-left:0; background:none;}
+.thumbList01 .info .icons {padding-top:3px; color:#000; letter-spacing:-1px;}
+.thumbList01 .info .icons .price {color:#db1a22; letter-spacing:0;}
+.thumbList01 .info .btns {position:absolute; width:auto; right:8px; bottom:8px; text-align:right;}
+.thumbList01 .info .btns a span {color:#3d3d3d; letter-spacing:-1px;}
+.thumbList01 .info .contact {padding-left:14px; background:url('/mOlleh/r2u/image/icoForMobile.png') no-repeat 0 0;background-size:10px;-webkit-background-size:10px auto;-moz-background-size:10px auto;}
+
+/* town contents list (사용하실땐 위의 thumList01과 함께 사용해야 합니다. */
+.sortSel {padding:15px 8px 8px; overflow:hidden; border-top:1px solid #D3D3D3}
+.sortSel input {float:left; width:22px; height:18px; vertical-align:middle;}
+.sortSel label {float:left; margin-right:8px; color:#000; vertical-align:middle; line-height:18px;}
+.thumbList01.town .thumb {width:108px; height:78px; border:0;}
+.thumbList01.town .thumb .alert {position:absolute; top:-1px; left:-1px;}
+.thumbList01.town .thumb .alert img {width:auto; height:auto;}
+.thumbList01.town .info {padding-left:125px;}
+.thumbList01.town .info .tit {margin-bottom:10px;}
+
+/* 댓글쓰기 */
+/* 일반댓글 쓰기 */
+.socialShare {border-bottom:1px solid #c0c0c0; overflow:hidden; padding:8px 15px 15px;}
+.socialShare .info {float:left; margin:10px 10px 0 0; color:#6d6d6d;}
+.socialShare .socialLinks {float:left;position:relative;top:7px;}
+.writeReply01 {border-top:1px solid #c0c0c0; padding:10px; overflow:hidden;}
+.writeReply01 .tit {color:#666; padding-bottom:10px;}
+.writeReply01 .info {color:#999; font-size:12px; padding-bottom:5px;}
+.writeReply01 .write {position:relative; height:30px; padding:2px 75px 6px 0;}
+.writeReply01 .write textarea {height:100%; width:100%; border:1px solid #d8d8d8;
+    box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; 
+	border-radius:0px;-moz-border-radius:0px;-webkit-border-radius:0px;-o-border-radius:0px;
+}
+.writeReply01 .write input {position:absolute; right:3px; top:2px; height:30px; width:67px; letter-spacing:-1px;}
+.writeReply01 .twit {font-size:12px; color:#666; letter-spacing:-1px;}
+.writeReply01 .twit input {position:relative;top:-2px;}
+.writeReply01 .twit input[type="text"] {width:27px;}
+
+/* 댓글리스트 */
+.replyList {border-top:1px solid #c0c0c0;}
+.replyList li {padding:15px 8px; font-size:14px; border-bottom:1px solid #c0c0c0; background-repeat:no-repeat; background-position:8px 15px;}
+.replyList li:nth-child(even) {background-color:#f9f9f9;}
+.replyList li.reReply {padding:15px 8px 15px 23px; background-image:url('/mOlleh/r2u/image/bgReReply.png'); background-position: 10px 19px;background-size:11px;-webkit-background-size:11px auto;-moz-background-size:11px auto;}
+.replyList li .author {float:left; padding-right:15px; color:#dd1a22;}
+.replyList li .points {float:left; padding-left:15px; background:url('/mOlleh/r2u/image/bgViewPointsParts.png') no-repeat left 2px;}
+.replyList li .date {float:right; color:#666; font-size:13px;}
+.replyList li .info {clear:both; padding-top:8px; color:#444;line-height:19px; vertical-align:top;}
+
+/* 결제하기 */
+.payWrap01 h2 {display:block;}
+.payWrap01 h3 {display:block; border-bottom:1px solid #d7d7d7; padding:14px 0 14px 10px; color:#3d3d3d; letter-spacing:-1px; line-height:100%;}
+.payWrap01 h3.thick { padding-bottom: 15px;padding-top: 20px;}
+.payWrap01 h3 { border-bottom: 1px solid #D7D7D7; color: #3D3D3D;display: block;font-size: 14px;letter-spacing: -1px;line-height: 100%;padding: 19px 0 19px 10px;}
+.viewMusic02 {position:relative; border-bottom:1px solid #d7d7d7; padding:10px 8px 10px 113px; background-color:#f8f8f8;}
+.viewMusic02 .thumb {position:absolute; left:10px; top:50%; margin-top:-38px;}
+.viewMusic02 .thumb img {border:2px solid #7d7d7d; width:87px; height:70px;}
+.viewMusic02 .info .info {width:100%; padding:0 0 5px 0; color:#6d6d6d; }
+.viewMusic02 .info .info:last-child {padding-bottom:0;}
+.viewMusic02 .info .tit {color:#3d3d3d;}
+.payWrap01 .btns {padding:20px 8px; text-align:center;}
+.payWrap01 .btns a:first-child {margin-right:10px;}
+.payWrap01 .btns input[type=image] {width:69px; border-radius:0px; -moz-border-radius:0px; -webkit-border-radius:0px; }
+
+.payWrap01 .sample .sampleConts {position:relative; padding:20px 110px 7px 15px; line-height:100%;}
+.payWrap01 .sample .sampleConts .conts {font-size:14px; color:#ed1a22; letter-spacing:-1px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.payWrap01 .sample .sampleConts .conts .tit {color:#3d3d3d;}
+.payWrap01 .sample .sampleConts .conts .info {}
+.payWrap01 .sample .sampleConts .btns {position:absolute; top:15px; right:10px; padding:0;}
+.payWrap01 .sample .sampleConts .btns a {padding:0 10px; letter-spacing:-1px;}
+
+.payWrap01 .sample .sampleConts1 {position:relative; padding:20px 30px 7px 15px; line-height:100%;}
+.payWrap01 .sample .sampleConts1 .conts {font-size:14px; color:#ed1a22; letter-spacing:-1px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.payWrap01 .sample .sampleConts1 .conts .tit {color:#3d3d3d;}
+.payWrap01 .sample .sampleConts1 .conts .info {}
+.payWrap01 .sample .sampleConts1 .btns {position:absolute; top:15px; right:10px; padding:0;}
+.payWrap01 .sample .sampleConts1 .btns a {padding:0 10px; letter-spacing:-1px;}
+
+.payWrap01 .inputInfo {padding:9px 15px; border-bottom:1px solid #b0b0b0;}
+.payWrap01 .inputInfo .br {position:relative; padding:4px 0 4px 85px; color:#232323;}
+.payWrap01 .inputInfo .br label {position:absolute; top:10px; left:0;}
+.payWrap01 .inputInfo .br label span {font-size:13px; color:#232323; letter-spacing:-1px;}
+.payWrap01 .inputInfo .br label div {font-size:13px; color:#232323; letter-spacing:-1px;}
+.payWrap01 .inputInfo .br input {width:100%; height:28px; font-size:14px; padding:0 11px;
+    box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; 
+}
+.payWrap01 .inputInfo .br .width100p {display:block; position:relative; width:100%; padding:9px 0 0 23px; color:#232323;
+    box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; 
+}
+.payWrap01 .inputInfo .br .width100p .at {position:absolute; left:0; top:17px;}
+.payWrap01 .inputInfo .br .width100p .select {display:block; width:100%; height:29px; padding:5px 0 0 10px; vertical-align:middle; overflow:hidden;
+    background:url('http://m.test.olleh.com/GLOBAL/IMAGE/BTN/btnArrowDown2.png') no-repeat 98% center;
+	background-size:12px auto;-webkit-background-size:12px auto;-moz-background-size:12px auto;
+    border-top:1px solid #797979; border-right:1px solid #ddd; border-bottom:1px solid #ddd; border-left:1px solid #797979;
+    box-shadow:1px 1px 2px #d9d9d9 inset; -moz-box-shadow:1px 1px 2px #d9d9d9 inset; -webkit-box-shadow:1px 1px 2px #d9d9d9 inset; 
+    box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;
+}
+.payWrap01 .inputInfo .br .width100p .select select {display:block; width:120%; height:100%; line-height:28px; color:#232323; border:0; padding:0; background:transparent;}
+.payWrap01 .inputInfo .br .info {display:block; padding-top:8px; padding-bottom:5px; line-height:100%; font-size:11px; color:#5d5d5d;}
+.payWrap01 .inputInfo .br:last-child .info {padding-bottom:0px;}
+
+.payWrap01 .selectHow {border-bottom:1px solid #d7d7d7; padding:15px 15px 13px; background:#f8f8f8;}
+.payWrap01 .selectHow label {display:block; padding-top:8px; line-height:100%; color:#262626;}
+.payWrap01 .selectHow label:first-child {padding-top:0px;}
+.payWrap01 .selectHow label input {width:25px; height:18px; position:relative;top:-2px;}
+.payWrap01 .selectHow p {padding-top:10px;}
+.payWrap01 .selectHow p input {width:100%; height:29px; padding:0 11px; line-height:14px; font-size:13px;
+    box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; 
+}
+
+.payWrap01 .thanks {border-bottom:1px solid #d7d7d7; background:#f9f9f9; padding:15px; text-align:center;position:relative;z-index:0;}
+.payWrap01 .thanks p {color:#6d6d6d;}
+.payWrap01 .thanks p:first-child {padding-bottom:20px; color:#3d3d3d; line-height:100%;}
+.payWrap01 .thanks p:last-child {line-height:140%;}
+.payWrap01 .contGray {background:#f9f9f9;}
+.payWrap01 .contGray h3 {padding:35px 30px 30px; line-height:100%;}
+.payWrap01 .contGray p {border-bottom:1px solid #e2e2e2; padding:15px 23px; line-height:100%; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.payWrap01 .contGray p .tit {color:#3d3d3d;}
+.payWrap01 .contGray p .info {color:#6d6d6d;}
+.payWrap01 .contGray p .red {color:#DE1A22;}
+.payWrap01 .btns a.mOllehBtnBlack {width:160px; padding:0;
+    border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px; 
+    box-shadow:1px 1px 2px #a6a6a6; -moz-box-shadow:1px 1px 2px #a6a6a6; -webkit-box-shadow:1px 1px 2px #a6a6a6; 
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#808080), color-stop(0.5 #1c1c1c), to(#3c3c3c));
+    background:-moz-linear-gradient(center top, #808080 0%,#1c1c1c 50%,#3c3c3c 100%);
+}
+
+/* 검색결과 */
+.resultNum {padding:3px 8px 8px; color:#000;letter-spacing:-1px;}
+.resultListHeader {position:relative; text-align:center; color:#3D3D3D; font-size:16px; letter-spacing:-1px;
+    border-top:1px solid #000; border-bottom:1px solid #ababab;
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#dfdfdf));
+    background:-moz-linear-gradient(center top, #fff 0%,#dfdfdf 100%);
+    box-shadow:0 2px 3px #bfbfbf; box-shadow:0 2px 3px #bfbfbf; box-shadow:0 2px 3px #bfbfbf; 
+}
+.resultListHeader span {display:block; padding:10px 0; line-height:100%;}
+.resultListHeader .first {position:absolute; left:0; top:0;}
+.resultListHeader.type01 {padding-left:90px;}
+.resultListHeader.type01 .first {width:90px;}
+.resultListHeader.type02 {padding-left:0;}
+.resultListHeader.type02 .first {width:auto;}
+
+.normalResultList {border-top:1px solid #c9c9c9;margin-bottom:-1px;}
+.normalResultList li {padding:10px 8px 5px; border-bottom:1px solid #c9c9c9;}
+.normalResultList li:nth-child(even) {background:#f2f2f2;}
+.normalResultList li .tit {line-height:19px; padding-bottom:3px; color:#444;letter-spacing:-1px;}
+.normalResultList li .answer {padding-left:15px; line-height:19px; color:#777;letter-spacing:-1px; background:url('/mOlleh/r2u/image/bgReReply.png') no-repeat 3px 5px;background-size:11px;-webkit-background-size:11px auto;-moz-background-size:11px auto;}
+.normalResultList li .answer .target {display:block; width:90%; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+
+/* 상세검색 type02 */
+.detailSearch2 {padding:15px;}
+.detailSearch2 .title {position:relative; width:100%; background:#f5f5f5;}
+.detailSearch2 .title .tit {height:39px; margin-right:35px; border:1px solid #989898; padding:0 10px; line-height:39px; color:#000; font-size:15px; letter-spacing:-1px;}
+.detailSearch2 .title .btns {position:absolute; right:0; top:0; width:35px; height:39px; border:1px solid #989898; border-left:0;}
+.detailSearch2 .title .btns a {display:block; width:100%; height:100%; background:url('http://m.test.olleh.com/MAIN/IMAGE/index/btnArrowDownRed.png') no-repeat center center; text-indent:-9999px;background-size:16px auto;-webkit-background-size:16px auto;-moz-background-size:16px auto;}
+.detailSearch2 .title .btns a.open {background:url('http://m.test.olleh.com/MAIN/IMAGE/index/btnArrowUpRed.png') no-repeat center center;background-size:16px auto;-webkit-background-size:16px auto;-moz-background-size:16px auto;}
+
+.detailSearch2 .detailSearchLay2 {border:1px solid #989898; border-top:0; padding:10px 10px 7px; letter-spacing:-1px;}
+.detailSearch2 .text {position:relative; height:30px; padding-right:75px;}
+.detailSearch2 .text input[type="text"] {display:block; width:100%; height:100%; text-indent:5px;
+    box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; 
+	padding:0 10px;
+}
+.detailSearch2 .text input[type="submit"] {position:absolute; right:5px; top:0; height:30px;
+    box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; 
+}
+.detailSearch2 .rad {position:relative; overflow:hidden; padding:0 0 7px 60px; font-size:15px;}
+.detailSearch2 .rad input[type="radio"] {position:relative;top:-3px;}
+.detailSearch2 .rad  .tit {position:absolute; left:0; padding:0 0 0 11px; background:url('http://m.test.olleh.com/MAIN/IMAGE/index/bgMainMyOlleh.png') no-repeat 0 6px; background-size:6px auto;-webkit-background-size:6px auto;;-moz-background-size:6px auto;color:#000;}
+.detailSearch2 .rad label {margin:0 10px 0 3px; line-height:60%; font-size:15px; color:#262626;}
+.detailSearch2 .rad .inputRadio {display:inline-block; width:0; height:35px; padding:0 10px 0 35px; overflow:hidden; vertical-align:top;
+    background:url('http://m.test.olleh.com/GLOBAL/IMAGE/BUL/radio.png') no-repeat 0 0;}
+.detailSearch2 .rad .inputRadio.checked {background-position:0 -65px;}
+.detailSearch2 .rad .inputRadio input {position:absolute; left:-9999px;}
+
+
+
+/*에티켓링 추가*/
+.musicList01 table td.tits .tit2 {display:block; width:95%; color:#000; font-size:15px; padding-left:11px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.ering_set1-4 {line-height:100%; font-size:11px; color:#5d5d5d; padding-left:5px;}
+
+.payWrap01 .selectHow2 {border-bottom:1px solid #d7d7d7; margin:10px 0 10px 0; border-top:1px solid #d7d7d7; padding:15px 15px 13px; background:#f8f8f8;}
+.payWrap01 .selectHow2 p input {width:70%; height:29px; padding:0 11px; line-height:14px; font-size:13px; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;}
+.ering_set_check {font-size:12px; color:#666;}
+
+.payWrap01 .contGray2 {background:#f9f9f9;}
+.payWrap01 .contGray2 h3 {padding:35px 30px 30px; line-height:100%;}
+.payWrap01 .contGray2 p {border-bottom:1px solid #e2e2e2; padding:15px 23px; line-height:100%; }
+.payWrap01 .contGray2 p .tit {color:#3d3d3d;}
+.payWrap01 .contGray2 p .info {color:#6d6d6d;}
+.payWrap01 .contGray2 p .red {color:#DE1A22;}
+
+
+.TblBorderType10 {
+	width:95%;
+	height:auto;
+	margin-top:20px;
+	margin-bottom:20px;
+	margin-left:auto;
+	margin-right:auto;
+}
+.TblBorderType10 .defaultTbl {width:100%; border-top:1px solid #e0e1e3;}
+.TblBorderType10 .defaultTbl th {background-color:#f5f5f5; border-bottom:1px solid #d3d3d3; font-size:12px; color:#3C3C3C; text-align:center; padding: 6px 0 4px 0; font:"돋움";}
+.TblBorderType10 .defaultTbl td {background-color:#ffffff;}
+.TblBorderType10 .defaultTbl td.num {border-bottom:1px solid #e0e1e3; font-size:14px; font-weight:normal; color:#666; text-align:center; padding: 10px 2px 10px 2px;}
+.TblBorderType10 .defaultTbl td.ering {border-bottom:1px solid #e0e1e3; font-size:13px; font-weight:normal; color:#000; text-align:left; padding: 5px 10px 5px 2px;}
+.TblBorderType10 .defaultTbl td.option {border-bottom:1px solid #e0e1e3; font-size:12px; font-weight:normal; color:#000; text-align:left; padding: 5px 2px 5px 2px;}
+.TblBorderType10 .defaultTbl td.center {border-bottom:1px solid #e0e1e3; text-align:center; padding: 5px 0 5px 0;}
+}
+
+
+
+.TblBorderType11 {
+	width:auto;
+	height:auto;
+	margin-top:20px;
+	margin-bottom:20px;
+}
+.TblBorderType11 .defaultTbl {width:100%;}
+.TblBorderType11 .defaultTbl td.plus {text-align:center; padding: 15px 0 5px 0;}
+.TblBorderType11 .defaultTbl td.minus {text-align:center; padding: 10px 0  10px 0; border-bottom: 1px solid #C0C0C0;}
+.TblBorderType11 .defaultTbl td.num {font:"돋움"; font-size:14px; font-weight:normal; color:#666; text-align:center; padding: 5px 0 5px 0;}
+.TblBorderType11 .defaultTbl td.btn {text-align:center; border-bottom: 1px solid #C0C0C0; padding:10px 0 5px 0;}
+}
+
+
+/* *************** */
+/* layer popup css 추가 fhkrwogk 2013-11-07*/
+.layerOverlay2 {position:absolute; top:0; left:0; width:100%; height:100%; background:#000; opacity:0.5; z-index:10000;}
+.layerOverlay2 {position:absolute; top:0; left:0; width:100%; height:100%; background:#000; opacity:0.5; z-index:99999;}
+.layerOverlay3 {position:absolute; top:0; left:0; width:100%; height:100%; background:#000; opacity:0.5; z-index:10000;}
+.layerOverlay3 {position:absolute; top:0; left:0; width:100%; height:100%; background:#000; opacity:0.5; z-index:99999;}
+.layerOverlay4 {position:absolute; top:0; left:0; width:100%; height:100%; background:#000; opacity:0.5; z-index:10000;}
+.layerOverlay4 {position:absolute; top:0; left:0; width:100%; height:100%; background:#000; opacity:0.5; z-index:99999;}
+
+
+.layerPop02 {position:absolute; top:0; left:0; width:100%; height:100%; background:none; z-index:100000;}
+.layerPop02 .inner {position:relative; margin:0 auto; margin:15px; padding:10px; border-top:2px solid #ff222a; 
+    box-shadow:0 0 4px #000;-moz-box-shadow:0 0 4px #000;-webkit-box-shadow:0 0 4px #000;
+}
+.layerPop02 .inner .innerOverlay {position:absolute; top:0; left:0; width:100%; height:100%; background:#222; opacity:0.7;}
+.layerPop02 .inner .popTit {position:relative; padding:0 0 7px 5px; text-align:left; font-size:16px; color:#fff; opacity:1; z-index:110000;}
+.layerPop02 .inner .popBody {position:relative; border:1px solid #000; background:#fff; overflow:hidden;
+    border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;
+    box-shadow:0 0 4px #999 inset;-moz-box-shadow:0 0 4px #999 inset;-webkit-box-shadow:0 0 4px #999 inset; z-index:110000;
+}
+.layerPop02 .inner .popBody .info {color:#3d3d3d; padding:15px 12px;}
+.layerPop02 .inner .popBody .info .subTit {color:#000; padding-bottom:7px; letter-spacing:-1px;}
+.layerPop02 .inner .popBody .info .text {padding-bottom:7px;}
+.layerPop02 .inner .popBody .info .text .red {color:#e12301;}
+.layerPop02 .inner .popBody .info .mOllehIconSquare { color:#6d6d6d; padding-top:5px; background-position:0 -141px;}
+.layerPop02 .inner .popBody .btnConfirm {padding:2px 0 15px; text-align:center;}
+.layerPop02 .inner .popBody .btnConfirm a {padding:0 25px; letter-spacing:0;}
+.layerPop02 .inner .popBody .btnClose {position:absolute; bottom:20px; right:15px;}
+.layerPop02 .inner .popBody .btnClose .close {display:inline-block; padding:5px 20px 5px 5px; color:#7d7d7d; 
+	background:url('https://m.olleh.com/GLOBAL/IMAGE/BTN/btnLayerClose.gif') no-repeat right center;
+	background-size:15px 15px; -webkit-background-size:15px 15px;
+}
+
+.layerPop03 {position:absolute; top:0; left:0; width:100%; height:100%; background:none; z-index:100000;}
+.layerPop03 .inner {position:relative; margin:0 auto; margin:15px; padding:10px; border-top:2px solid #ff222a; 
+    box-shadow:0 0 4px #000;-moz-box-shadow:0 0 4px #000;-webkit-box-shadow:0 0 4px #000;
+}
+.layerPop03 .inner .innerOverlay {position:absolute; top:0; left:0; width:100%; height:100%; background:#222; opacity:0.7;}
+.layerPop03 .inner .popTit {position:relative; padding:0 0 7px 5px; text-align:left; font-size:16px; color:#fff; opacity:1; z-index:110000;}
+.layerPop03 .inner .popBody {position:relative; border:1px solid #000; background:#fff; overflow:hidden;
+    border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;
+    box-shadow:0 0 4px #999 inset;-moz-box-shadow:0 0 4px #999 inset;-webkit-box-shadow:0 0 4px #999 inset; z-index:110000;
+}
+.layerPop03 .inner .popBody .info {color:#3d3d3d; padding:15px 12px;}
+.layerPop03 .inner .popBody .info .subTit {color:#000; padding-bottom:7px; letter-spacing:-1px;}
+.layerPop03 .inner .popBody .info .text {padding-bottom:7px;}
+.layerPop03 .inner .popBody .info .text .red {color:#e12301;}
+.layerPop03 .inner .popBody .info .mOllehIconSquare { color:#6d6d6d; padding-top:5px; background-position:0 -141px;}
+.layerPop03 .inner .popBody .btnConfirm {padding:2px 0 15px; text-align:center;}
+.layerPop03 .inner .popBody .btnConfirm a {padding:0 25px; letter-spacing:0;}
+.layerPop03 .inner .popBody .btnClose {position:absolute; bottom:20px; right:15px;}
+.layerPop03 .inner .popBody .btnClose .close {display:inline-block; padding:5px 20px 5px 5px; color:#7d7d7d; 
+	background:url('https://m.olleh.com/GLOBAL/IMAGE/BTN/btnLayerClose.gif') no-repeat right center;
+	background-size:15px 15px; -webkit-background-size:15px 15px;
+}
+
+.layerPop04 {position:absolute; top:0; left:0; width:100%; height:100%; background:none; z-index:100000;}
+.layerPop04 .inner {position:relative; margin:0 auto; margin:15px; padding:10px; border-top:2px solid #ff222a; 
+    box-shadow:0 0 4px #000;-moz-box-shadow:0 0 4px #000;-webkit-box-shadow:0 0 4px #000;
+}
+.layerPop04 .inner .innerOverlay {position:absolute; top:0; left:0; width:100%; height:100%; background:#222; opacity:0.7;}
+.layerPop04 .inner .popTit {position:relative; padding:0 0 7px 5px; text-align:left; font-size:16px; color:#fff; opacity:1; z-index:110000;}
+.layerPop04 .inner .popBody {position:relative; border:1px solid #000; background:#fff; overflow:hidden;
+    border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;
+    box-shadow:0 0 4px #999 inset;-moz-box-shadow:0 0 4px #999 inset;-webkit-box-shadow:0 0 4px #999 inset; z-index:110000;
+}
+.layerPop04 .inner .popBody .info {color:#3d3d3d; padding:15px 12px;}
+.layerPop04 .inner .popBody .info .subTit {color:#000; padding-bottom:7px; letter-spacing:-1px;}
+.layerPop04 .inner .popBody .info .text {padding-bottom:7px;}
+.layerPop04 .inner .popBody .info .text .red {color:#e12301;}
+.layerPop04 .inner .popBody .info .mOllehIconSquare { color:#6d6d6d; padding-top:5px; background-position:0 -141px;}
+.layerPop04 .inner .popBody .btnConfirm {padding:2px 0 15px; text-align:center;}
+.layerPop04 .inner .popBody .btnConfirm a {padding:0 25px; letter-spacing:0;}
+.layerPop04 .inner .popBody .btnClose {position:absolute; bottom:20px; right:15px;}
+.layerPop04 .inner .popBody .btnClose .close {display:inline-block; padding:5px 20px 5px 5px; color:#7d7d7d; 
+	background:url('https://m.olleh.com/GLOBAL/IMAGE/BTN/btnLayerClose.gif') no-repeat right center;
+	background-size:15px 15px; -webkit-background-size:15px 15px;
+}
+
+/*링투유+ 설정하기 버튼*/
+.mentRing_setup_btn_01 {display:inline-block;width:55px;height:30px;background:url('/mOlleh/r2u/image/plus.gif') no-repeat 0 0;}
+
+/*링투유+ 20131223 추가*/
+.musicList03 {border-top:0px solid #e0e1e3; margin-bottom:-1px;}
+.musicList03 table {width:100%; border-collapse:collapse;}
+.musicList03 table td {border-bottom:1px solid #c9c9c9; padding:5px 0;}
+.musicList03 table td:First-child {border-right:1px solid #e0e1e3;}
+.musicList03 table td:nth-child(even) {border-right:1px solid #e0e1e3;}
+.musicList03 table td.nums {font-size:14px; color:#000; text-align:center;}
+.musicList03 table td.tits {text-align:left;}
+.musicList03 table td.tits .tit {display:block; padding-left:11px; padding-right:11px; padding-bottom:4px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-size:12px; color:#000; font-weight:bold;}
+.musicList03 table td.tits .artist {display:block; padding-left:11px; padding-right:11px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-size:12px; color:#666;}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="data">    
+    <select id="getRingCodeList" parameterType="com.ktf.oem.data.TbFileMetaInfo"  resultType="com.ktf.oem.data.TbFileMetaInfo">
+		SELECT DISTINCT LRING1, LRING2, LRING3, XRING1, XRING2, XRING3, R19_LICENCE_TF
+		  FROM TB_FILE_META_INFO 
+		 WHERE KTF_LID = #{ktf_lid} AND SCP_ID = #{scp_id}
+    </select>
+    <select id="getTbFileServiceMap" parameterType="com.ktf.oem.data.TbFileServiceMap2"  resultType="com.ktf.oem.data.TbFileServiceMap2">
+		SELECT	metaseq,     file_scp_id, file_regdate, file_title, file_singer, file_scp,    cate_code,
+				file_xring1, file_xring2, file_xring3,  ktf_lid,    file_lring1, file_lring2, file_lring3, file_sort
+		  FROM TB_FILE_SERVICE_MAP2
+         WHERE cate_code = #{cate_code} AND file_sort = #{file_sort}	 
+    </select>
+    <select id="getKtfLid" parameterType="java.util.Map"  resultType="java.lang.String">
+		select KTF_LID from tb_file_info where file_xring = #{file_xring}
+    </select>
+</mapper>

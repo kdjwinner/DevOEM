@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="event">    
+	<insert id="insertSmsLog" parameterType="com.ktf.oem.event.EventBean">
+		INSERT INTO TB_PAGEVIEW_LOG 
+			(mdn, conn_ip, measure_date, page_name,  page_url, page_param, reserved1, reserved2, reserved3) 
+			VALUES ( #{mdn},#{conn_ip},(select MAX(a.measure_date)+1 from TB_PAGEVIEW_LOG a),#{page_name},#{page_url},#{page_param},#{reserved1},#{reserved2},#{reserved3})	 				
+    </insert>  	
+    
+	<insert id="setCertify" parameterType="com.ktf.oem.event.EventBean">
+  		INSERT INTO tb_sms_certify (idx, ctn, certinum, regdate, id) VALUES(tb_sms_certify_seq.NEXTVAL, #{ctn}, #{certinum}, SYSDATE, #{id}) 				
+    </insert> 	
+      
+    <select id="getCertify" parameterType="java.util.Map" resultType="java.lang.String">
+		select CERTINUM from (SELECT CERTINUM FROM TB_SMS_CERTIFY WHERE CTN=#{ctn} and id = 'OEM' ORDER BY IDX DESC) where rownum <![CDATA[<]]> 2 
+    </select>    
+
+	<insert id="insertCertifyResult" parameterType="com.ktf.oem.event.EventUser4">
+  		insert into TB_EVENT_USER4 (REGDATE, MIN, NAME) values (#{regdate}, #{min}, #{name}) 				
+    </insert> 	    
+      
+</mapper>
